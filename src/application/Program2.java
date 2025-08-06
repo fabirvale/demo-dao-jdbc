@@ -6,7 +6,6 @@ import java.util.Scanner;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
-import model.entities.Seller;
 
 public class Program2 {
 
@@ -19,24 +18,24 @@ public class Program2 {
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
-		System.out.println("=== TEST 1: seller findById ===");
+		System.out.println("=== TEST 1: Department findById ===");
 		Department department = departmentDao.findById(1);
 		System.out.println(department);
 		
 		       
-        System.out.println("\n=== TEST 2: seller findAll ===");
+        System.out.println("\n=== TEST 2: Department findAll ===");
         List<Department> list = departmentDao.findAll();
         for (Department dep : list) {
         	System.out.println(dep);
         }
         
-        /*
-        System.out.println("\n=== TEST 4: seller insert ===");
-		Seller newSeller = new Seller(null,"Greg Brown", "greg@gmail.com", new Date(), 4000.00, department);
-        sellerDao.insert(newSeller);
-		System.out.println("Inserted! New id = " + newSeller);
+        
+        System.out.println("\n=== TEST 3: Department insert ===");
+		Department newDep = new Department(null,"Kids");
+        departmentDao.insert(newDep);
+		System.out.println("Inserted! New id = " + newDep);
 		
-		  
+		/*  
         System.out.println("\n=== TEST 5: seller update ===");
 		seller = sellerDao.findById(1);
         seller.setName("Marta Waine");
