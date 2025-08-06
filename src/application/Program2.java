@@ -30,26 +30,26 @@ public class Program2 {
         }
         
         
-        System.out.println("\n=== TEST 3: Department insert ===");
+      /*  System.out.println("\n=== TEST 3: Department insert ===");
 		Department newDep = new Department(null,"Kids");
         departmentDao.insert(newDep);
 		System.out.println("Inserted! New id = " + newDep);
 		
 		 
-        System.out.println("\n=== TEST 4: Department update ===");
+       System.out.println("\n=== TEST 4: Department update ===");
         newDep = departmentDao.findById(1);
 		newDep.setName("Home Decor");
 		departmentDao.update(newDep);
-		System.out.println("Update completed!");
+		System.out.println("Update completed!");*/
 		
-		/*
-		System.out.println("\n=== TEST 6: seller delete ===");
+		
+		System.out.println("\n=== TEST 5: Department delete ===");
 		System.out.println("Enter id for delete test: ");
 		int id = sc.nextInt();
-		sellerDao.deleteById(id);
+		departmentDao.deleteById(id);
 		System.out.println("Delete completed!");
 		
-		sc.close();*/
+		sc.close();
 	}
 
 }
