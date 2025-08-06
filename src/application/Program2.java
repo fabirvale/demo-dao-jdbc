@@ -5,25 +5,26 @@ import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
-import model.dao.SellerDao;
+import model.dao.DepartmentDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-public class Program {
+public class Program2 {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 	    
-		//instanciando um sellerDao.O programa não conhece a implementação
+		//instanciando um DepartmentDao.O programa não conhece a implementação
 		//conhece somente a interface, é uma forma de injeção de dependencia
 		
-		SellerDao sellerDao = DaoFactory.createSellerDao();
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
 		System.out.println("=== TEST 1: seller findById ===");
-		Seller seller = sellerDao.findById(3);
+		Department department = departmentDao.findById(1);
+		System.out.println(department);
 		
-		System.out.println("\n=== TEST 2: seller findByDepartment ===");
+	/*	System.out.println("\n=== TEST 2: seller findByDepartment ===");
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
         for (Seller obj : list) {
@@ -54,7 +55,7 @@ public class Program {
 		sellerDao.deleteById(id);
 		System.out.println("Delete completed!");
 		
-		sc.close();
+		sc.close();*/
 	}
 
 }
